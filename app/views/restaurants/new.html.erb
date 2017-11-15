@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 style="text-align: center">add a resto</h1>
+    <div class="row">
+      <%= simple_form_for [@restaurant] do |r| %>
+        <div class="col-xs-4 col-xs-offset-4">
+          <%= r.input :name %>
+          <%= r.input :category, collection: [ "chinese", "italian", "japanese", "french", "belgian" ] %>
+          <%= r.input :address %>
+          <%= r.input :phone_number %>
+          <%= r.submit "add resto", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+</div>
+
+

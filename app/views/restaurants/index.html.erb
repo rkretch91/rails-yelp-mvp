@@ -1,0 +1,15 @@
+<div class="container">
+<h1 style="text-align: center">welcome to hipster yelp!</h1>
+  <div class="row">
+    <h3 style="text-align: center"><%= link_to "add a new resto", new_restaurant_path %></h3>
+    <% @restaurants.each do |r| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+      <h2><%= r.name %></h2>
+      <p><em><%= r.category %></em></p>
+      <p><%= r.address %></p>
+      <p><%= r.phone_number %></p>
+      <%= link_to "more details", restaurant_path(r), class: "btn btn-danger" %>
+      </div>
+    <% end %>
+  </div>
+</div>
